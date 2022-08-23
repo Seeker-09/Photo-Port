@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Nav(props) {
   const {
@@ -9,7 +8,7 @@ function Nav(props) {
   } = props;
 
   useEffect(() => {
-    document.title = capitalizeFirstLetter(currentCategory)
+    document.title = currentCategory
   }, [currentCategory])
 
   return (
@@ -41,7 +40,7 @@ function Nav(props) {
                   setCurrentCategory(category)
                 }}
               >
-                {capitalizeFirstLetter(category.name)}
+                {category.name}
               </span>
             </li>
           ))}
